@@ -265,7 +265,7 @@ try and extract the device firmware at this point.
 We look for a way to set the device into bootloader mode.
 
 According to the datasheet holding down GPIO0 & GPIO46 would do just that:
-![](./2024-06-01T00:27:43,878610179+02:00.png)
+![](./2024-05-31T23:57:05,237164191+02:00.png)
 
 
 We stop short of attempting a short on the pins of the module.
