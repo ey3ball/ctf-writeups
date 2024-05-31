@@ -265,10 +265,12 @@ try and extract the device firmware at this point.
 We look for a way to set the device into bootloader mode.
 
 According to the datasheet holding down GPIO0 & GPIO46 would do just that:
+![](./2024-06-01T00:27:43,878610179+02:00.png)
 
-Before we attempt some physical modification, a little birdie reminds us of
-Gaston's instruction. simply holding the top button will trigger the UART
-download mode:
+
+We stop short of attempting a short on the pins of the module.
+Gaston's instruction. simply holding the top button while plugging the USB
+will trigger the UART download mode
 
 Now we're in business, we can run flash-id to collect some information about
 the device :
@@ -459,6 +461,7 @@ idf.py menuconfig
 
 We take care of enabling the right flags : we want to build in devmode (to
 keep the ability to reflash) with on the fly flash encryption enabled
+![](./2024-06-01T00:27:43,878610179+02:00.png)
 
 Then after some trial & error we find the right sequence to flash our device:
 ```
